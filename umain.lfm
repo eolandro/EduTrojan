@@ -1,0 +1,61 @@
+object Frmtrj: TFrmtrj
+  Left = 339
+  Height = 355
+  Top = 172
+  Width = 283
+  Caption = 'Generador de claves'
+  ClientHeight = 355
+  ClientWidth = 283
+  OnActivate = FormActivate
+  LCLVersion = '2.2.0.4'
+  object CbbSrv: TComboBox
+    Left = 80
+    Height = 26
+    Top = 64
+    Width = 100
+    ItemHeight = 0
+    ItemIndex = 0
+    Items.Strings = (
+      'Steam'
+      'Google'
+      'Microsoft'
+      'Xcloud'
+      'PSNetwork'
+    )
+    ReadOnly = True
+    TabOrder = 0
+    Text = 'Steam'
+  end
+  object Label1: TLabel
+    Left = 56
+    Height = 17
+    Top = 16
+    Width = 145
+    Caption = 'Selecciona el servicio '
+  end
+  object btnok: TButton
+    Left = 0
+    Height = 84
+    Top = 112
+    Width = 280
+    Caption = 'Generar Ahora!!!'
+    OnClick = btnokClick
+    TabOrder = 1
+  end
+  object PB1: TProgressBar
+    Left = 0
+    Height = 80
+    Top = 232
+    Width = 280
+    Max = 120
+    Step = 1
+    TabOrder = 2
+  end
+  object Tm1: TTimer
+    Enabled = False
+    Interval = 500
+    OnTimer = Tm1Timer
+    Left = 220
+    Top = 32
+  end
+end
